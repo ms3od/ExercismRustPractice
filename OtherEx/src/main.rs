@@ -6,33 +6,33 @@ use std::io;
 impl fibonacci {
     pub fn fibonacci_recurssive(n:i64) -> i64 {
         if n<0 {
-            panic!("{} is a negative number.", n);
+            panic!("{n} is a negative number.");
         }
         match n {
             0 => 0, 
             1 | 2 => 1,
-            _ => fibonacci(n-1) + fibonacci(n-2)
+            _ => fibonacci::fibonacci_recurssive(n-1) + fibonacci::fibonacci_recurssive(n-2)
         }
     }
 
-    pub fn ChoosenMethod(&self,&Choice : String){
+    pub fn ChoosenMethod(&self,&choice : String) {
         let recurssive = "recurssive";
         
     }
 }
 
 pub struct fibonacci {
-    NumInLetter : String,
-    MethodOfCalculation : bool,
+    num_in_letter : String,
+    method_of_calculation : bool,
     n : u64,
     fib : u64,
 }
 
 
 fn main() {
-    let mut myfibonacci : fibonacci;
-    io::stdin().read_line(&MyStruct::n : u64).except("Failed to read line.")
+    let mut my_fibonacci : fibonacci;
+    io::stdin().read_line(my_fibonacci::n).except("Failed to read line.");
 
     println!("Hello, world!");
-    println!("F(100) = {}",fibonacci(40));
+    println!("F(100) = {}",my_fibonacci::fibonacci_recurssive(40));
 }
